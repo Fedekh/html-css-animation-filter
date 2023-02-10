@@ -93,17 +93,101 @@
                                         /* FUORI 6 */
 /* ------------------------------------------------------------------------------------------------------ */
 
+.ex-7-img {
+    width: 500px;
+    transition: all 2s;
+}
+
+.ex-7-img:hover{
+    filter: sepia(.6);
+    filter: grayscale(.5);
+}
+
+                                        /* FUORI 7 */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+.ex-8-img {
+    width: 500px;
+    transition: all 2s;
+}
+
+.ex-8-img:hover{
+    filter: sepia(.6);
+    filter: grayscale(.7);
+    border-radius: 20px;
+}
+
+                                        /* FUORI 8 */
+/* ------------------------------------------------------------------------------------------------------ */
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: all 1.5s;
 }
+
+.ex-9-img:hover {
+    scale: 1.5;
+    border-radius: 20px;
+    filter: sepia(.7);
+    filter: grayscale(.7);
+}
+
+                                        /* FUORI 9 */
+/* ------------------------------------------------------------------------------------------------------ */
 .ex-10-icon {
     font-size: 60px;
+    animation-name: circle;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
+
+@keyframes circle {
+    from {
+        transform: rotate(0deg);
+    }    
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+                                        /* FUORI 10 */
+/* ------------------------------------------------------------------------------------------------------ */
 .ex-11-icon {
     font-size: 60px;
+    
+    
+    
 }
+
+.ex-11-icon:hover {
+    animation-name: circle2;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    
+}
+
+@keyframes circle2 {
+    0% {
+        transform: rotate(0deg);
+    }    
+
+    90% {
+        transform: rotate(300deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+   
+
+                                        /* FUORI 11*/
+/* ------------------------------------------------------------------------------------------------------ */
+
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -117,6 +201,8 @@
     text-align: center;
     text-decoration: none;
 }
+
+
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
     top: -10px;
@@ -125,6 +211,8 @@
     width: 60px;
     height: 20px;
 }
+
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
@@ -132,4 +220,134 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+
+.ex-12-button:hover {
+    /* text-decoration: underline; */
+}
+
+.ex-12-button:hover .ex-12-top-white{
+    animation-name: walk;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+
+@keyframes walk {
+    0% {
+        left: 10%;
+        
+    }
+    50%{
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 10%;
+    }
+    
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation-name: walk1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+
+@keyframes walk1 {
+    0% {
+        right: 20%;
+        
+    }
+    50%{
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 20%;
+    }
+    
+}
+
+                                        /* FUORI 12 */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+.ex-13-button:hover {
+    text-decoration: underline;
+}
+
+.ex-13-button:hover .ex-13-top-white{
+    animation-name: walk2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+
+@keyframes walk2 {
+    0% {
+        left: 10%;
+        top: -10px;
+        
+    }
+    30%{
+        left: calc(100% - 30px);
+        top: -10px;
+
+    }
+    45% {
+        left: calc(100% - 30px);
+        top: 100%;
+    }
+
+    75% {
+        left: 0;
+        top: 100%;
+    }
+
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+    
+}
+
+.ex-13-button:hover .ex-13-bottom-white{
+    animation-name: walk3;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+
+@keyframes walk3 {
+    0% {
+        right: 20%;
+        bottom: -10px;
+    }
+    30% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+    45% {
+        right: calc(100% - 30px);
+        bottom: 100%;
+    }
+    75% {
+        right: 0;
+        bottom: 100%;
+    }
+    90% {
+        right: -15px;
+        bottom: -10px;
+    }
+    100% {
+        right: 20%;
+        bottom: -10px;
+    }
+    
 }
